@@ -13,7 +13,7 @@ Using the Bigcommerce PHP library, you can establish a connection with a store i
     'username' => 'admin',
     'api_key' => 'xxxxxx'
     ));
-    Bigcommerce_Api::setCipher('RC4-SHA')
-    Bigcommerce_Api::verifyPeer(false);
+    Bigcommerce::setCipher('RC4-SHA')
+    Bigcommerce::verifyPeer(false);
     
 </pre>
