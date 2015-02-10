@@ -34,6 +34,21 @@ This will provide the option ID, which we will use for the next step.
     )
 </pre>
 
+To add some values to the option add bellow function to your bigcommerce.php file after getOptionValues function
+<pre>
+    public static function createOptionValue($option_id, $object)
+    {
+        return self::createResource('/options/' . $option_id . '/values', $object);
+    }
+</pre>
+
+Then create some option value
+<pre>
+    $optionvalue = array('label' => "Your option label", 'sort_order' => "Your option sort order", 'value' => "Your option value");
+    Bigcommerce::createOptionValue('option_id',$optionvalue);
+</pre>
+
+
 Creating a new optionset.
 
 <pre>
